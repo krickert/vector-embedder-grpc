@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.krickert.embeddings";
+option java_outer_classname = "SentenceEmbeddings";
+option objc_class_prefix = "HLW";
+
+package com.krickert.semantic;
+
+service SentenceEmbeddingsService {
+  rpc send (SentenceEmbeddingsRequest) returns (SentenceEmbeddingsReply) {}
+}
+
+message SentenceEmbeddingsRequest {
+  string text = 1;
+}
+
+message SentenceEmbeddingsReply {
+  repeated float vector = 1;
+}

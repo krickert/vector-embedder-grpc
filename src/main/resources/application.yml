@@ -1,0 +1,23 @@
+#Wed Sep 13 08:26:58 EDT 2023
+micronaut:
+  application:
+    name: embedder
+  server:
+    port: 8080
+consul:
+  client:
+    registration:
+      enabled: true
+    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
+    discovery:
+      enabled: true
+grpc:
+  client:
+    discovery:
+      enabled: true
+endpoints:
+  all:
+    enabled: true
+    sensitive: false
+  stop:
+    enabled: false
