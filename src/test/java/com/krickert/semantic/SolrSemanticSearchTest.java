@@ -38,9 +38,12 @@ public class SolrSemanticSearchTest {
                     "Watermelons are red.",
                     "I like watermelons for breakfast.",
                     "Saffron is a wonderful spice for soup.",
-                    "Hollywood writers are on strike",
+                    "Hollywood writers are demanding higher wages",
                     "The fruit is large, green outside and red inside with seeds.",
-                    "Skyscrapers are taller than most buildings"
+                    "Skyscrapers are taller than most buildings",
+                    "Construction workers did not cross the picket line",
+                    "A bowling score of 300 is a terrible score",
+                    "bat, ball, mitt, diamond, park"
             };
 
 
@@ -80,6 +83,10 @@ public class SolrSemanticSearchTest {
         performSemanticQuery(client, "hardhat");
         performSemanticQuery(client, "universal studios");
         performSemanticQuery(client, "architecture");
+        performSemanticQuery(client, "hardhat");
+        performSemanticQuery(client, "what is the impact of the economy when the price of lettuce goes down");
+        performSemanticQuery(client, "strike");
+        performSemanticQuery(client, "baseball");
 
 
         // Close the SolrClient instance.
