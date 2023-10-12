@@ -80,11 +80,8 @@ public class SolrSemanticSearchTest {
         keywordQueryDemo(client);
         // semantic search!
         performSemanticQuery(client, "watermelon");
-        performSemanticQuery(client, "hardhat");
         performSemanticQuery(client, "universal studios");
         performSemanticQuery(client, "architecture");
-        performSemanticQuery(client, "hardhat");
-        performSemanticQuery(client, "what is the impact of the economy when the price of lettuce goes down");
         performSemanticQuery(client, "strike");
         performSemanticQuery(client, "baseball");
 

@@ -28,6 +28,7 @@ public class Vectorizer {
             .optEngine("PyTorch")
             .optTranslatorFactory(new TextEmbeddingTranslatorFactory())
             .build();
+
     public float[] embeddings(String text) {
         try (ZooModel<String, float[]> model = criteria.loadModel();
              Predictor<String, float[]> predictor = model.newPredictor()) {
